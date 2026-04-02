@@ -1,0 +1,15 @@
+<suite name="EZLife Test Suite" verbose="1">
+
+  <test name="Home Tests">
+        <classes>
+            <class name="tests.HomeTest"/>
+        </classes>
+    </test>>
+
+   <test name="Product Tests">
+        <classes>
+            <class name="tests.Producttest"/>
+        </classes>
+    </test>
+
+</suite>

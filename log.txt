@@ -1,0 +1,48 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.ezlife:ezlife_framework >---------------------
+[INFO] Building EZLife Test Framework 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ ezlife_framework ---
+[INFO] Deleting C:\Users\Jack\Documents\ezlife_framework\ezlife_framework\target
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ ezlife_framework ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ ezlife_framework ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 3 source files with javac [debug target 11] to target\classes
+[WARNING] system modules path not set in conjunction with -source 11
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ ezlife_framework ---
+[INFO] skip non existing resourceDirectory C:\Users\Jack\Documents\ezlife_framework\ezlife_framework\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ ezlife_framework ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 2 source files with javac [debug target 11] to target\test-classes
+[WARNING] system modules path not set in conjunction with -source 11
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ ezlife_framework ---
+[INFO] Using auto detected provider org.apache.maven.surefire.testng.TestNGProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running TestSuite
+Second test running on same browser
+Current URL: https://www.ezlifehealthcare.com/products?category=Health+and+Wellness&categorySlug=health-and-wellness
+? Product Page Opened Successfully
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.109 s -- in TestSuite
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.316 s
+[INFO] Finished at: 2026-04-02T14:09:16+05:30
+[INFO] ------------------------------------------------------------------------
