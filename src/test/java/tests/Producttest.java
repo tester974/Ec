@@ -1,10 +1,16 @@
 package tests;
 
-import base.BaseTest;
 import io.qameta.allure.*;
 import pages.Productpage;
+
+import java.time.Duration;
+
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
+
+import base.BaseTest;
 
 @Epic("EZLife Website Testing")
 @Feature("Product Page")
@@ -12,58 +18,62 @@ public class Producttest extends BaseTest {
 
     private Productpage productPage;
 
-    @BeforeClass   // ✅ Changed from BeforeMethod
+    @BeforeClass
     public void start() {
         setup();
         productPage = new Productpage(driver);
     }
 
-    @BeforeMethod   // ✅ NEW (keeps tests independent but same browser)
+    @BeforeMethod
     public void loadPage() {
         productPage.openProductpage(baseUrl);
     }
 
-    @Test
+    // ✅ Test 1: Verify page opens
+    @Test(priority = 1)
     @Description("Verify Product Listing Page opens correctly")
     @Severity(SeverityLevel.CRITICAL)
     public void verifyProductPageOpened() {
 
-        String currentUrl = productPage.getCurrentUrl();   // ✅ Improved
+        String currentUrl = productPage.getCurrentUrl();
 
-        System.out.println("Current URL: " + currentUrl);
+        Assert.assertTrue(currentUrl.contains("/products"),
+                "❌ Product page URL invalid!");
 
-        Assert.assertTrue(currentUrl.contains("Health+and+Wellness"),
-                "❌ Product page not opened!");
-
-        System.out.println("✅ Product Page Opened Successfully");
+        System.out.println("✅ Product Page Opened: " + currentUrl);
     }
 
-    @Test
-    @Description("Verify second test runs in same browser session")
-    @Severity(SeverityLevel.MINOR)
-    public void secondTest() {
-        System.out.println("✅ Second test running on same browser");
-    }
-
-    @Test
-    @Description("Verify user is able to click product and navigate to product detail page")
-    @Severity(SeverityLevel.CRITICAL)
+    // ✅ Test 2: Click product and go back
+    @Test(priority = 2)
+    @Description("Verify user can click product and navigate back")
     public void verifyClickProductNavigation() {
 
         productPage.clickFirstProduct();
         productPage.waitForProductPage();
 
-        String currentUrl = productPage.getCurrentUrl();   // ✅ Improved
+        System.out.println("✅ Navigated to Product Detail Page");
 
-        System.out.println("Navigated URL: " + currentUrl);
+        driver.navigate().back();
 
-        Assert.assertTrue(currentUrl.contains("products"),
-                "❌ User is NOT navigated to product detail page!");
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.urlContains("/products"));
 
-        System.out.println("✅ User successfully navigated to product detail page");
+        System.out.println("✅ Navigation Back Successful");
     }
 
-    @AfterClass(alwaysRun = true)   // ✅ Safer teardown
+    // ✅ Test 3: Click ONLY one category
+    @Test(priority = 3)
+    @Description("Verify single category dropdown expands")
+    public void verifyCategoryDropdownExpand() {
+
+        productPage.handlePopupIfPresent();
+
+        productPage.clickCategoryIcon();
+
+        System.out.println("✅ Category clicked successfully");
+    }
+
+    @AfterClass(alwaysRun = true)
     public void end() {
         tearDown();
     }

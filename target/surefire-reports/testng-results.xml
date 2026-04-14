@@ -1,65 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-02T15:36:29 IST" name="EZLife Test Suite" finished-at="2026-04-02T15:39:13 IST" duration-ms="163517">
+  <suite started-at="2026-04-03T18:12:47 IST" name="EZLife Test Suite" finished-at="2026-04-03T18:12:58 IST" duration-ms="10388">
     <groups>
     </groups>
-    <test started-at="2026-04-02T15:36:29 IST" name="Home Tests" finished-at="2026-04-02T15:39:01 IST" duration-ms="151832">
-      <class name="tests.HomeTest">
-        <test-method is-config="true" signature="start()[pri:0, instance:tests.HomeTest@2cb4893b]" started-at="2026-04-02T15:36:29 IST" name="start" finished-at="2026-04-02T15:36:37 IST" duration-ms="7924" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- start -->
-        <test-method signature="verifyWebsiteOpen()[pri:1, instance:tests.HomeTest@2cb4893b]" started-at="2026-04-02T15:36:37 IST" name="verifyWebsiteOpen" finished-at="2026-04-02T15:36:37 IST" duration-ms="65" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWebsiteOpen -->
-        <test-method signature="verifyAllMenusHover()[pri:2, instance:tests.HomeTest@2cb4893b]" started-at="2026-04-02T15:36:37 IST" name="verifyAllMenusHover" finished-at="2026-04-02T15:36:44 IST" depends-on-methods="tests.HomeTest.verifyWebsiteOpen" duration-ms="6389" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAllMenusHover -->
-        <test-method signature="testAllMenusClick()[pri:3, instance:tests.HomeTest@2cb4893b]" started-at="2026-04-02T15:36:44 IST" name="testAllMenusClick" finished-at="2026-04-02T15:39:01 IST" depends-on-methods="tests.HomeTest.verifyAllMenusHover" duration-ms="136889" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllMenusClick -->
-        <test-method is-config="true" signature="end()[pri:0, instance:tests.HomeTest@2cb4893b]" started-at="2026-04-02T15:39:01 IST" name="end" finished-at="2026-04-02T15:39:01 IST" duration-ms="390" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- end -->
-      </class> <!-- tests.HomeTest -->
-    </test> <!-- Home Tests -->
-    <test started-at="2026-04-02T15:39:01 IST" name="Product Tests" finished-at="2026-04-02T15:39:13 IST" duration-ms="11654">
+    <test started-at="2026-04-03T18:12:47 IST" name="Product Tests" finished-at="2026-04-03T18:12:58 IST" duration-ms="10388">
       <class name="tests.Producttest">
-        <test-method is-config="true" signature="start()[pri:0, instance:tests.Producttest@28dcca0c]" started-at="2026-04-02T15:39:01 IST" name="start" finished-at="2026-04-02T15:39:02 IST" duration-ms="1397" status="PASS">
+        <test-method is-config="true" signature="start()[pri:0, instance:tests.Producttest@cc43f62]" started-at="2026-04-03T18:12:47 IST" name="start" finished-at="2026-04-03T18:12:50 IST" duration-ms="2807" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method is-config="true" signature="loadPage()[pri:0, instance:tests.Producttest@28dcca0c]" started-at="2026-04-02T15:39:02 IST" name="loadPage" finished-at="2026-04-02T15:39:07 IST" duration-ms="4360" status="PASS">
+        <test-method is-config="true" signature="loadPage()[pri:0, instance:tests.Producttest@cc43f62]" started-at="2026-04-03T18:12:50 IST" name="loadPage" finished-at="2026-04-03T18:12:52 IST" duration-ms="1796" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadPage -->
-        <test-method signature="secondTest()[pri:0, instance:tests.Producttest@28dcca0c]" started-at="2026-04-02T15:39:07 IST" name="secondTest" finished-at="2026-04-02T15:39:07 IST" duration-ms="6" status="PASS">
+        <test-method signature="secondTest()[pri:0, instance:tests.Producttest@cc43f62]" started-at="2026-04-03T18:12:52 IST" name="secondTest" finished-at="2026-04-03T18:12:52 IST" duration-ms="73" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- secondTest -->
-        <test-method is-config="true" signature="loadPage()[pri:0, instance:tests.Producttest@28dcca0c]" started-at="2026-04-02T15:39:07 IST" name="loadPage" finished-at="2026-04-02T15:39:08 IST" duration-ms="980" status="PASS">
+        <test-method is-config="true" signature="loadPage()[pri:0, instance:tests.Producttest@cc43f62]" started-at="2026-04-03T18:12:52 IST" name="loadPage" finished-at="2026-04-03T18:12:53 IST" duration-ms="1034" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadPage -->
-        <test-method signature="verifyClickProductNavigation()[pri:0, instance:tests.Producttest@28dcca0c]" started-at="2026-04-02T15:39:08 IST" name="verifyClickProductNavigation" finished-at="2026-04-02T15:39:12 IST" duration-ms="3924" status="PASS">
+        <test-method signature="verifyClickProductNavigation()[pri:0, instance:tests.Producttest@cc43f62]" started-at="2026-04-03T18:12:53 IST" name="verifyClickProductNavigation" finished-at="2026-04-03T18:12:57 IST" duration-ms="3378" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyClickProductNavigation -->
-        <test-method is-config="true" signature="loadPage()[pri:0, instance:tests.Producttest@28dcca0c]" started-at="2026-04-02T15:39:12 IST" name="loadPage" finished-at="2026-04-02T15:39:12 IST" duration-ms="685" status="PASS">
+        <test-method is-config="true" signature="loadPage()[pri:0, instance:tests.Producttest@cc43f62]" started-at="2026-04-03T18:12:57 IST" name="loadPage" finished-at="2026-04-03T18:12:57 IST" duration-ms="798" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadPage -->
-        <test-method signature="verifyProductPageOpened()[pri:0, instance:tests.Producttest@28dcca0c]" started-at="2026-04-02T15:39:12 IST" name="verifyProductPageOpened" finished-at="2026-04-02T15:39:12 IST" duration-ms="11" status="PASS">
+        <test-method signature="verifyProductPageOpened()[pri:0, instance:tests.Producttest@cc43f62]" started-at="2026-04-03T18:12:57 IST" name="verifyProductPageOpened" finished-at="2026-04-03T18:12:57 IST" duration-ms="14" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyProductPageOpened -->
-        <test-method is-config="true" signature="end()[pri:0, instance:tests.Producttest@28dcca0c]" started-at="2026-04-02T15:39:12 IST" name="end" finished-at="2026-04-02T15:39:13 IST" duration-ms="263" status="PASS">
+        <test-method is-config="true" signature="end()[pri:0, instance:tests.Producttest@cc43f62]" started-at="2026-04-03T18:12:57 IST" name="end" finished-at="2026-04-03T18:12:58 IST" duration-ms="292" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->

@@ -16,7 +16,9 @@ public class HomePage {
     // 🔹 Locators
     private By menuButtons = By.xpath("//button[contains(@class,'flex') and contains(@class,'cursor-pointer')]");
     private By popupCloseBtn = By.xpath("//button[@aria-label='Close']");
+    private By facebookIcon = By.xpath("//a[contains(@href, 'facebook.com')]");
 
+    // 🔹 Constructor
     public HomePage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -28,20 +30,17 @@ public class HomePage {
         return driver.getCurrentUrl();
     }
 
-    // 🔥 Popup handle (safe)
+    // 🔥 Popup handle
     public void handleInitialPopup() {
         try {
-            System.out.println("Checking for popup...");
             List<WebElement> popup = driver.findElements(popupCloseBtn);
 
-            if (popup.size() > 0) {
+            if (!popup.isEmpty()) {
                 popup.get(0).click();
                 System.out.println("Popup closed.");
-            } else {
-                System.out.println("No popup found.");
             }
         } catch (Exception e) {
-            System.out.println("Popup not handled.");
+            System.out.println("No popup found.");
         }
     }
 
@@ -76,5 +75,25 @@ public class HomePage {
         } catch (Exception e) {
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
         }
+    }
+
+    // 🔥 Scroll until Facebook icon visible
+    public boolean scrollUntilFacebookIconVisible() {
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        int maxScrolls = 10;
+
+        for (int i = 0; i < maxScrolls; i++) {
+
+            try {
+                wait.until(ExpectedConditions.visibilityOfElementLocated(facebookIcon));
+                System.out.println("Facebook icon visible");
+                return true;
+            } catch (Exception e) {
+                js.executeScript("window.scrollBy(0,500)");
+            }
+        }
+
+        return false;
     }
 }

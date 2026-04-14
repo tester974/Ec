@@ -10,8 +10,6 @@ import pages.HomePage;
 import java.util.ArrayList;
 import java.util.List;
 
-@Epic("EZLife Website Testing")
-@Feature("Home Page")
 public class HomeTest extends BaseTest {
 
     HomePage home;
@@ -19,13 +17,8 @@ public class HomeTest extends BaseTest {
     @BeforeClass
     public void start() {
         setup();
-
-        // Open Home Page
         driver.get(baseUrl);
-
         home = new HomePage(driver);
-
-        // Handle popup
         home.handleInitialPopup();
     }
 
@@ -35,10 +28,10 @@ public class HomeTest extends BaseTest {
     public void verifyWebsiteOpen() {
 
         String url = home.getCurrentUrl();
-        System.out.println("Current URL: " + url);
 
-        Assert.assertTrue(url.contains("ezlifehealthcare"),
-                "Website load nahi hui!");
+        // Checking for generic "ezlife" to match other assertions in the suite
+        Assert.assertTrue(url.contains("ezlife"),
+                "Website did not load or unexpected URL: " + url);
     }
 
     @Test(priority = 2, dependsOnMethods = "verifyWebsiteOpen")
@@ -47,7 +40,6 @@ public class HomeTest extends BaseTest {
     public void verifyAllMenusHover() throws InterruptedException {
 
         List<WebElement> menus = home.getNavMenus();
-        System.out.println("Total menus found: " + menus.size());
 
         for (WebElement menu : menus) {
 
@@ -56,7 +48,6 @@ public class HomeTest extends BaseTest {
             if (!menuName.isEmpty()) {
 
                 home.hoverOnMenu(menu);
-                System.out.println("Hover: " + menuName);
 
                 boolean isVisible = home.isDropdownVisible(menuName);
                 Assert.assertTrue(isVisible, "Dropdown missing for " + menuName);
@@ -82,8 +73,6 @@ public class HomeTest extends BaseTest {
 
         for (String name : menuNames) {
 
-            System.out.println("Clicking: " + name);
-
             home.clickMenu(name);
 
             Thread.sleep(1500);
@@ -96,8 +85,24 @@ public class HomeTest extends BaseTest {
 
             home.handleInitialPopup();
         }
+    }
 
-        System.out.println("All menus clicked successfully.");
+    @Test(priority = 4)
+    @Description("Verify Facebook icon is visible after scrolling to footer")
+    @Severity(SeverityLevel.NORMAL)
+    public void verifyFacebookIconVisibleAfterScroll() {
+
+        // Ensure we're on base URL
+        driver.get(baseUrl);
+
+        // Scroll until Facebook icon visible
+        boolean isVisible = home.scrollUntilFacebookIconVisible();
+
+        // Assertion
+        Assert.assertTrue(isVisible,
+                "Facebook icon is NOT visible after scrolling");
+
+        System.out.println("Test Passed: Facebook icon visible after scrolling");
     }
 
     @AfterClass

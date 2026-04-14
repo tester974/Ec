@@ -5,11 +5,11 @@
     <classes>
       <class name="tests.Producttest">
         <methods>
+          <include name="loadPage"/>
           <include name="end"/>
           <include name="start"/>
-          <include name="verifyProductPageOpened"/>
+          <include name="verifyCategoryDropdownExpand"/>
           <include name="verifyClickProductNavigation"/>
-          <include name="secondTest"/>
         </methods>
       </class> <!-- tests.Producttest -->
     </classes>

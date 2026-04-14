@@ -6,6 +6,7 @@
       <class name="tests.HomeTest">
         <methods>
           <include name="start"/>
+          <include name="verifyFacebookIconVisibleAfterScroll"/>
           <include name="verifyWebsiteOpen"/>
           <include name="testAllMenusClick"/>
           <include name="end"/>

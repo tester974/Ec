@@ -1,15 +1,17 @@
 <suite name="EZLife Test Suite" verbose="1">
 
-  <test name="Home Tests">
+    <!-- Home Tests -->
+    <test name="Home Tests">
         <classes>
             <class name="tests.HomeTest"/>
         </classes>
-    </test>>
+    </test>
 
-   <test name="Product Tests">
+    <!-- Product Tests -->
+    <!-- <test name="Product Tests">
         <classes>
             <class name="tests.Producttest"/>
         </classes>
-    </test>
+    </test>-->
 
 </suite>

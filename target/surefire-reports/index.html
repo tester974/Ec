@@ -55,7 +55,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-EZLife_Test_Suite" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -108,27 +108,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-EZLife_Test_Suite" title="tests.HomeTest" class="method navigator-link" hash-for-method="testAllMenusClick">testAllMenusClick</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-EZLife_Test_Suite" title="tests.HomeTest" class="method navigator-link" hash-for-method="verifyAllMenusHover">verifyAllMenusHover</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-EZLife_Test_Suite" title="tests.Producttest" class="method navigator-link" hash-for-method="verifyClickProductNavigation">verifyClickProductNavigation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-EZLife_Test_Suite" title="tests.Producttest" class="method navigator-link" hash-for-method="verifyProductPageOpened">verifyProductPageOpened</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-EZLife_Test_Suite" title="tests.HomeTest" class="method navigator-link" hash-for-method="verifyWebsiteOpen">verifyWebsiteOpen</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-EZLife_Test_Suite -->
@@ -172,35 +157,6 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-EZLife_Test_Suite-class-passed -->
-          <div class="suite-EZLife_Test_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.HomeTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testAllMenusClick">
-                  </a> <!-- testAllMenusClick -->
-                  <span class="method-name">testAllMenusClick</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyAllMenusHover">
-                  </a> <!-- verifyAllMenusHover -->
-                  <span class="method-name">verifyAllMenusHover</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyWebsiteOpen">
-                  </a> <!-- verifyWebsiteOpen -->
-                  <span class="method-name">verifyWebsiteOpen</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-EZLife_Test_Suite-class-passed -->
         </div> <!-- panel EZLife_Test_Suite -->
         <div panel-name="test-xml-EZLife_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -211,11 +167,6 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;EZLife Test Suite&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Home Tests&quot; verbose=&quot;0&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;tests.HomeTest&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Home Tests --&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Product Tests&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.Producttest&quot;/&gt;
@@ -231,9 +182,6 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
-              <li>
-                <span class="test-name">Home Tests (1 class)</span>
-              </li>
               <li>
                 <span class="test-name">Product Tests (1 class)</span>
               </li>
@@ -261,36 +209,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testAllMenusClick')
-data.setCell(0, 2, 'tests.HomeTest')
-data.setCell(0, 3, 136889);
+data.setCell(0, 1, 'verifyClickProductNavigation')
+data.setCell(0, 2, 'tests.Producttest')
+data.setCell(0, 3, 3378);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyAllMenusHover')
-data.setCell(1, 2, 'tests.HomeTest')
-data.setCell(1, 3, 6389);
+data.setCell(1, 1, 'secondTest')
+data.setCell(1, 2, 'tests.Producttest')
+data.setCell(1, 3, 73);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyClickProductNavigation')
+data.setCell(2, 1, 'verifyProductPageOpened')
 data.setCell(2, 2, 'tests.Producttest')
-data.setCell(2, 3, 3924);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyWebsiteOpen')
-data.setCell(3, 2, 'tests.HomeTest')
-data.setCell(3, 3, 65);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyProductPageOpened')
-data.setCell(4, 2, 'tests.Producttest')
-data.setCell(4, 3, 11);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'secondTest')
-data.setCell(5, 2, 'tests.Producttest')
-data.setCell(5, 3, 6);
+data.setCell(2, 3, 14);
 window.suiteTableData['EZLife_Test_Suite']= { tableData: data, tableDiv: 'times-div-EZLife_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-EZLife_Test_Suite">
               </div> <!-- times-div-EZLife_Test_Suite -->
             </div> <!-- times-div -->
@@ -316,61 +252,38 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.HomeTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.Producttest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">start</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">verifyWebsiteOpen</span>
-                <span class="method-start">7944 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyAllMenusHover</span>
-                <span class="method-start">8109 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testAllMenusClick</span>
-                <span class="method-start">14504 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">end</span>
-                <span class="method-start">151402 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.Producttest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">start</span>
-                <span class="method-start">151824 ms</span>
-              </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">loadPage</span>
-                <span class="method-start">153222 ms</span>
+                <span class="method-start">2838 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">secondTest</span>
-                <span class="method-start">157587 ms</span>
+                <span class="method-start">4726 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">loadPage</span>
-                <span class="method-start">157601 ms</span>
+                <span class="method-start">4820 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyClickProductNavigation</span>
-                <span class="method-start">158584 ms</span>
+                <span class="method-start">5857 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">loadPage</span>
-                <span class="method-start">162514 ms</span>
+                <span class="method-start">9239 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyProductPageOpened</span>
-                <span class="method-start">163201 ms</span>
+                <span class="method-start">10039 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">end</span>
-                <span class="method-start">163214 ms</span>
+                <span class="method-start">10055 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
